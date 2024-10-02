@@ -1,0 +1,103 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.productBanner{
+
+    &__wrapper{ 
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        @include unevenGrid(4.5fr 2fr, 2);
+        gap: 2rem;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+        h4{
+            color: $clr--light;
+            font-size: 1rem;
+        }
+        p{
+            color: $clr--secondary;
+            font-weight: 700;
+            padding-bottom: 1rem;
+        }
+    }
+    h2{
+        padding-top: 5rem;
+    }
+    &__card1{ 
+        @include mediaQuery(520px){
+            padding-top: 5rem;
+            grid-template-columns: 1fr;
+            gap: 5rem;
+        }      
+        @include evenGrid(3, 1fr);
+        gap: 2rem;
+        text-align: center; 
+    } 
+   &__minicard{
+    border: 1px solid $clr--secondary;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    text-align: center;
+   }
+    &__card2{
+        @include mediaQuery(520px){
+            padding-top: 4rem;
+        }
+        input{   
+            width: 15rem;
+            padding: 0.7rem 1rem;
+            background-color: rgba($color: #00000086, $alpha: 1.0);
+            border-radius: 1rem; 
+              
+            &:enabled{
+                color:$clr--light;
+            }
+            
+        }
+        form{
+            padding-bottom: 2rem;
+            i{
+                position: relative;
+                left: -3rem;
+            }
+        }     
+    }
+    &__category{
+      
+        background-color: rgba($color: #00000086, $alpha: 1.0);
+        border-radius: 1rem;
+        width: 15rem;
+        height: 25rem;
+        line-height: 2rem;
+        small{
+           color:  $clr--light;
+           margin-left: 2rem;
+        }
+        h4{
+            font-size: 1.5rem;
+            margin-left: 2rem;
+            padding-bottom: 1.5rem;
+            padding-top: 2rem;
+        }
+        span:after{
+           content: " ";
+            display: inline-block;
+            position: relative;
+            background-color: $clr--light;
+            width: 11rem;
+            height: 0.1rem;
+            left: 2rem;
+            bottom: 1rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+        }
+        
+        }  
+    }
+    
+
+    
+

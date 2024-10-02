@@ -1,0 +1,77 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.contactPage{
+@include centerAll;
+    &__wrapper{
+    @include mediaQuery(520px){
+    display: flex;
+    flex-direction: column-reverse;
+}
+        padding-top: 10rem;
+        padding-bottom: 5rem;    
+    }
+    &__info{
+        @include mediaQuery(520px){
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        @include centerAll;
+        display: flex;
+        gap: 5rem;
+        li a{
+            color: $clr--secondary;
+        }
+    }
+    iframe{
+        @include mediaQuery(520px){
+            display: none;
+        }
+            border-radius: 1rem;
+    }
+  &__name {
+    @include between;
+  }
+  &__table {
+    padding: 5rem;
+    width: 100%;
+    height: 45rem;
+    @include mediaQuery(520px){
+      width: 100%;
+      padding: 0;
+    }
+    h4 {
+      font-size: 2rem;
+    }
+    label{
+        display: flex;
+        margin-left: 1rem;
+    }
+    form {
+      padding: 2rem;
+    }
+    input {
+      width: 98%;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      background-color: transparent;
+      border: 1px solid $clr--light;
+      border-radius: 1rem; 
+    }
+    textarea {
+      @extend input;
+      height: 10rem;
+      margin-bottom: 3rem;
+    }
+    input::placeholder {
+      font-family: $font--primary;
+      color: $clr--light;
+    }
+    input:focus,
+    input:enabled {
+      color: $clr--light;
+    }
+  }
+}
+

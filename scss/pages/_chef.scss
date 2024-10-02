@@ -1,0 +1,32 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.chefBanner{
+    
+    @include centerAll;
+    &__wrapper{
+        @include mediaQuery(520px){
+        grid-template-columns: 1fr;
+    }
+        @include evenGrid(4, 1fr);
+        gap: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        img{
+            @include imgFit;
+            height: 25rem;
+            border-radius: 1rem;
+        }
+        h4{
+            color: $clr--light;
+            font-size: 1.5rem;
+        }
+        p{
+            color: $clr--secondary;
+            font-weight: 700;
+        }
+    }
+    h2{
+        padding-top: 5rem;
+    }
+}

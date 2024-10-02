@@ -1,0 +1,33 @@
+@use "../abstract/" as *;
+@use "..//base/" as *;
+
+.blogPage{
+    @include centerAll;
+    &__wrapper{
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
+        padding-top: 5rem;
+    }
+    &__card{
+        text-align: left;
+        img{
+            @include mediaQuery(520px){
+                height: 300px;
+            }
+        @include imgFit(100%, 40rem);
+         padding-top: 2rem;
+         padding-bottom: 1.5rem;
+         border-radius: 3rem;
+        }
+        &--details{
+            h4{
+                padding-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+            p{
+                padding-bottom:2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.menuList {
+  @include centerAll;
+  
+  &__wrapper {
+    @include mediaQuery(520px){
+      grid-template-columns: 1fr;
+    }
+    @include unevenGrid(25fr 25fr, 1fr);
+    text-align: left;
+    justify-items: center;
+  }
+  img{
+    @include mediaQuery(520px){
+      height: 300px;
+    }
+    @include imgFit;
+    width: 68rem;
+    border-radius: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1%;
+    height: 40rem;
+  }
+}
